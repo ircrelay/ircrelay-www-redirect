@@ -1,3 +1,4 @@
+import os
 from flask import Flask, redirect
 
 app = Flask(__name__)
@@ -8,4 +9,4 @@ def hello():
     return redirect('https://ircrelay.com')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=os.environ['PORT'])
